@@ -19,7 +19,7 @@ main{
     z-index: -8;
 }
 .background{
-    background: url(/back.jpg);
+    background-image: url(back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -59,7 +59,7 @@ li a:hover{
     background-color: #fff;
 }
 .logo{
-    background: url(/s_logo.svg);
+    background-image: url(s_logo.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 275px;
@@ -74,7 +74,7 @@ li a:hover{
     z-index: 9;
 }
 .main-header{
-    background: url(/main.svg);
+    background-image: url(main.svg);
     background-size:contain;
     background-repeat: no-repeat;
     width: 1150px;
@@ -88,7 +88,7 @@ iframe{
 }
 
 .yellow{
-    background: url(/batman_in_yellow_background_4k_hd_batman-1920x1080.jpg);
+    background-image: url(batman_in_yellow_background_4k_hd_batman-1920x1080.jpg);
     background-size: contain;
     width: 100%;
     height: 530px;
@@ -96,7 +96,7 @@ iframe{
 }
 
 .robert{
-    background: url(/the_batman_robert_pattinson_2021_poster_4k_hd_movies.jpg);
+    background-image: url(the_batman_robert_pattinson_2021_poster_4k_hd_movies.jpg);
     background-size: contain;
     width: 100%;
     height: 530px;
@@ -104,7 +104,7 @@ iframe{
 }
 
 .enemy{
-    background: url(/enemy.jpg);
+    background-image: url(enemy.jpg);
     background-size: contain;
     width: 100%;
     height: 530px;
