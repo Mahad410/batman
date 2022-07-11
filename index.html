@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="\splide-4.0.7\dist\js\splide.min.js"></script>
+    <link href="\splide-4.0.7\dist\css/themes/splide-default.min.css" rel="stylesheet" />
+
+    <title>Batman</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="background"></div>
+    <main>
+        <nav class="nav">
+            <div class="menu">
+                <ul>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#characters">Characters</a></li>
+                </ul>
+        </div>
+               <a href="#">
+                <div class="logo">
+                </div>
+               </a>
+        <div class="menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#pOrder" id="pOrder">Pre-Order</a></li>
+            </ul>
+    </div>
+        </nav>
+        <header class="main-header"></header>  
+        <section class="slider_container">
+        <div id="main-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mqqft2x_Aa4?controls=0" title="THE BATMAN – Main Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+                <li class="splide__slide">
+                    <iframe width="950" height="534" src="https://www.youtube.com/embed/-FZ-pPFAjYY" title="THE BATMAN Trailer (2022)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+                <li class="splide__slide"> <h1>1</h1></li>
+                <li class="splide__slide"> <h1>1</h1></li>
+                <li class="splide__slide"> <h1>1</h1></li>
+                <li class="splide__slide"> <h1>1</h1></li>
+                <li class="splide__slide"> <h1>1</h1></li>
+                <li class="splide__slide"> <h1>1</h1></li>
+                <li class="splide__slide"> <h1>1</h1></li>
+              </ul>
+            </div>
+          </div>
+          <div id="thumbnail-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="/thumbnail1.png">
+                </li>
+                <li class="splide__slide">
+                    <img src="/thumbnail2.png">
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+                <li class="splide__slide">
+                  <h1>1</h1>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    </main>
+
+      <script>
+var main = new Splide( '#main-slider', {
+  type       : 'fade',
+  height: '570px',
+  width:'1150px',
+  pagination : false,
+  arrows     : false,
+  cover      : true,
+} );
+
+var thumbnails = new Splide( '#thumbnail-slider', {
+  rewind          : true,
+  fixedWidth      : 200,
+  fixedHeight     : 120,
+  isNavigation    : true,
+  gap             : 10,
+  focus           : 'center',
+  pagination      : false,
+  cover           : true,
+  arrows : false,
+  dragMinThreshold: {
+    mouse: 4,
+    touch: 10,
+  },
+  breakpoints : {
+    640: {
+      fixedWidth  : 66,
+      fixedHeight : 38,
+    },
+  },
+} );
+
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
+
+
+
+      </script>
+</body>
+</html>
