@@ -82,6 +82,30 @@ li a:hover{
 }
 
 iframe{
-    border:5px solid black;
+    border:5px solid #000;
     
+}
+
+.yellow{
+    background: url(/batman_in_yellow_background_4k_hd_batman-1920x1080.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
+}
+
+.robert{
+    background: url(/the_batman_robert_pattinson_2021_poster_4k_hd_movies.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
+}
+
+.enemy{
+    background: url(/enemy.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
 }
