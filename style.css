@@ -59,7 +59,7 @@ li a:hover{
     background-color: #fff;
 }
 .logo{
-    background: url(/logo.webp);
+    background: url(/s_logo.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 275px;
@@ -74,7 +74,7 @@ li a:hover{
     z-index: 9;
 }
 .main-header{
-    background: url(/main.webp);
+    background: url(/main.svg);
     background-size:contain;
     background-repeat: no-repeat;
     width: 1150px;
