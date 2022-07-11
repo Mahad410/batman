@@ -23,7 +23,7 @@ main{
     z-index: -8;
 }
 .background{
-    background-image: url(back.jpg);
+    background-image: url(back.webp);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -92,7 +92,7 @@ iframe{
 }
 
 .yellow{
-    background-image: url(batman_in_yellow_background_4k_hd_batman-1920x1080.jpg);
+    background-image: url(batman_in_yellow_background_4k_hd_batman-1920x1080.webp);
     background-size: contain;
     width: 100%;
     height: 530px;
@@ -100,7 +100,7 @@ iframe{
 }
 
 .robert{
-    background-image: url(the_batman_robert_pattinson_2021_poster_4k_hd_movies.jpg);
+    background-image: url(the_batman_robert_pattinson_2021_poster_4k_hd_movies.webp);
     background-size: contain;
     width: 100%;
     height: 530px;
@@ -108,7 +108,7 @@ iframe{
 }
 
 .enemy{
-    background-image: url(enemy.jpg);
+    background-image: url(enemy.webp);
     background-size: contain;
     width: 100%;
     height: 530px;
