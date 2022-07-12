@@ -11,7 +11,7 @@ body{
 }
 main{
     min-height: 100vh;
-    width: 1150px;
+    width: 1200px;
     margin: auto;
     overflow: hidden;
 }
@@ -84,6 +84,7 @@ li a:hover{
     width: 1150px;
     height: 650px;
     margin: auto;
+    transition: transform 100ms linear;
 }
 
 iframe{
