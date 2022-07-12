@@ -7,14 +7,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="dist/js/splide.min.js"></script>
     <link href="dist/css/splide.min.css" rel="stylesheet">  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>  
-    <link rel="shortcut icon" href="s_logo.svg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <link rel="shortcut icon" href="belt.png">
     <title>Batman</title>
 </head>
 <body>
     <div class="overlay"></div>
     <div class="background"></div>
-    <main>
+
         <nav class="nav">
             <div class="menu">
                 <ul>
@@ -36,20 +36,22 @@
     </div>
         </nav>
         <header class="main-header" data-speed="5" id="parallax">
-        </header>  
+        </header>
+            <main>  
         <section class="slider_container">
+          <div class="section"></div>
         <div id="main-slider" class="splide">
             <div class="splide__track">
               <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="yellow"></div>
+                  </li>
                 <li class="splide__slide">
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NLOp_6uPccQ?controls=0" title="The Batman - DC FanDome Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </li>
                 <li class="splide__slide">
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mqqft2x_Aa4?controls=0" title="THE BATMAN – Main Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </li>
-                  <li class="splide__slide">
-                    <div class="yellow"></div>
-                    </li>
                     <li class="splide__slide">
                       <div class="robert"></div>
                       </li>
@@ -59,18 +61,19 @@
               </ul>
             </div>
           </div>
+          
           <div id="thumbnail-slider" class="splide">
             <div class="splide__track">
               <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="batman_in_yellow_background_4k_hd_batman-1920x1080.webp" >
+              </li>
                 <li class="splide__slide">
                     <img src="thumbnail3.webp">
                 </li>
                 <li class="splide__slide">
                   <img src="thumbnail1.webp">
                 </li>
-                <li class="splide__slide">
-                  <img src="batman_in_yellow_background_4k_hd_batman-1920x1080.webp" >
-              </li>
                 <li class="splide__slide">
                   <img src="the_batman_robert_pattinson_2021_poster_4k_hd_movies.webp">
                 </li>
@@ -87,7 +90,7 @@
 var main = new Splide( '#main-slider', {
   type       : 'fade',
   height: '570px',
-  width:'1150px',
+  width:'1100px',
   pagination : false,
   arrows     : false,
   cover      : true,
@@ -126,10 +129,14 @@ thumbnails.mount();
              width=win.innerWidth(),
               height=win.innerHeight(),
               x=((e.clientX-width/2)*15)/500,
-             y=((e.clientY-height/2)*15)/400;
-    
+             y=((e.clientY-height/2)*15)/400,
+             sideX = ((e.clientX-width/2))/30,
+             sideY =((e.clientY-height/2))/30
           $("header").css({
               transform:"translate("+x+"px,"+y+"px)"
+          });
+          $(".section").css({
+              transform:"translate("+-sideX+"px,"+-sideY+"px)"
           });
           });
       })
