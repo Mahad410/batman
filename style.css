@@ -104,16 +104,19 @@ li a:hover{
     1px -1px 0 #000,
     -1px -1px 0 #000; 
     font-weight: bold;
+    
 }
 
 .heading h1:nth-child(1){
     animation: slide 1000ms ease-in-out forwards;
+    animation-delay: 500ms;
     transform: translateY(-150px);
     font-size: 4rem;
 }
 
 .heading h1:nth-child(2){
     animation: splide 1000ms ease-in-out forwards;
+    animation-delay: 500ms;
     transform: translateY(150px);
     font-size: 3rem;
     
