@@ -36,6 +36,10 @@
     </div>
         </nav>
         <header class="main-header" data-speed="5" id="parallax">
+          <div class="heading">
+            <h1>BATMAN</h1>
+            <h1>Your enemies will define you</h1>
+          </div>
         </header>
             <main>  
         <section class="slider_container">
@@ -137,6 +141,9 @@ thumbnails.mount();
           });
           $(".section").css({
               transform:"translate("+-sideX+"px,"+-sideY+"px)"
+          });
+           $(".heading").css({
+            transform:"translate("+-x*1.8+"px,"+-y*1.8+"px)"
           });
           });
       })
