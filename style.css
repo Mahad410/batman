@@ -69,7 +69,7 @@ li a:hover{
     background-image: url(logo.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 310px;
+    width: 320px;
     height: 160px;
 }
 .nav{
@@ -94,13 +94,11 @@ li a:hover{
     position: relative;
     z-index: 9999998;
     filter: drop-shadow(0 0 1rem #fff);
-   
 }
-
 .heading{
     text-align: center;
     overflow: hidden;
-    transform: translateZ(60px);
+    transform: translateZ(500px);
     transition: transform 200ms linear;
 }
 .heading h1{
@@ -111,7 +109,6 @@ li a:hover{
     1px -1px 0 #000,
     -1px -1px 0 #000; 
     font-weight: bold;
-    
 }
 
 .heading h1:nth-child(1){
