@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bangers', cursive;
 }
 body{
     width: 100%;
@@ -52,6 +53,7 @@ a{
     padding: 5px 8px;
     border-radius: 5px;
     transition: background-color 300ms ease-in-out , color 300ms ease-in-out;
+    letter-spacing: 0.2rem;
 }
 li a:hover{
     background-color: #000;
@@ -95,7 +97,7 @@ li a:hover{
     z-index: 9999998;
     filter: drop-shadow(0 0 1rem #fff);
 }
-.heading{
+/* .heading{
     text-align: center;
     overflow: hidden;
     transform: translateZ(500px);
@@ -103,26 +105,26 @@ li a:hover{
 }
 .heading h1{
     padding: 0px 20px;
-    color: rgba(100, 149, 237);
-    text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000; 
+    text-shadow: -1px 1px 0 #fff,
+    1px 1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px -1px 0 #fff; 
     font-weight: bold;
+    font-family: 'Blaka', cursive;
 }
 
 .heading h1:nth-child(1){
     animation: slide 1000ms ease-in-out forwards;
     animation-delay: 500ms;
     transform: translateY(-150px);
-    font-size: 4rem;
+    font-size: 7rem;
 }
 
 .heading h1:nth-child(2){
     animation: splide 1000ms ease-in-out forwards;
     animation-delay: 500ms;
     transform: translateY(150px);
-    font-size: 3rem;
+    font-size: 6rem;
 }
 
 @keyframes slide{
@@ -141,7 +143,7 @@ li a:hover{
     100%{
     transform:translateY(0px) ;
     }
-}
+} */
 iframe{
     border:5px solid #000;
     
@@ -176,7 +178,7 @@ margin: auto;
 .section,.logos,.about{
     position: relative;
     z-index: 8;
-    transition: transform 850ms linear;
+    transition: transform 300ms linear;
 }
 .section::after{
     content: "";
@@ -210,14 +212,15 @@ margin: auto;
     filter: drop-shadow(0 0 0.75rem black);
     z-index: -9;
 }
-#char,#media,#about{
+#char,#media,.abt{
     text-align: center;
-    font-size: 4rem;
+    font-size: 9rem;
     padding-top: 100px;
     text-shadow: -1px 1px 0 #fff,
     1px 1px 0 #fff,
     1px -1px 0 #fff,
-    -1px -1px 0 #fff; 
+    -1px -1px 0 #fff;
+    font-family: 'Blaka', cursive;
 }
 
 .float{
@@ -231,11 +234,12 @@ margin: auto;
     -1px -1px 0 #fff; 
 }
 .float h1{
-font-size: 3rem;
+font-size: 4rem;
 }
 .float p{
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: bold;
+    line-height: 2.5rem;
     }
 .batman{
     background-image: url(batman-main.jpg);
@@ -322,16 +326,18 @@ font-size: 3rem;
 }
 #about p{
     text-shadow: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: left;
     position: relative;
     z-index: 999997;
+    line-height: 2.5rem;
 }
 
 .about::after{
     content: "Why so Serious !";
-    width: 300px;
+    font-size: 4rem;
+    width: 350px;
     position: absolute;
     top: 200px;
     right: 0;
@@ -344,6 +350,8 @@ font-size: 3rem;
     -1px -1px 0 red;
     filter: drop-shadow(0 0 0.75rem red);
     z-index: -1;
+    line-height: 4rem;
+    letter-spacing: 0.5rem;
 }
 
 
@@ -355,8 +363,9 @@ font-size: 3rem;
     width: 400px;
     height: 200px;
     position: absolute;
-    top: 200px;
+    top: 300px;
     left: 0;
+    margin-left: -200px;
     transform: rotate(-30deg);
     pointer-events: none;
     filter: drop-shadow(0 0 1rem blue);
@@ -376,4 +385,5 @@ footer{
     align-items: center;
     color: #fff;
     padding: 0 20px;
+    font-size: 2rem;
 }
