@@ -55,7 +55,7 @@ a{
     transition: background-color 300ms ease-in-out , color 300ms ease-in-out;
     letter-spacing: 0.2rem;
 }
-li a:hover{
+li a:hover,.active{
     background-color: #000;
     color:#fff;
 }
@@ -222,7 +222,6 @@ margin: auto;
     -1px -1px 0 #fff;
     font-family: 'Blaka', cursive;
 }
-
 .float{
     width: 95%;
 }

@@ -19,22 +19,27 @@
         <nav class="nav">
             <div class="menu">
                 <ul>
-                    <li><a href="#media">Media</a></li>
-                    <li><a href="#char">Characters</a></li>
+                    <li><a href="#media" data-scroll="media">Media</a></li>
+                    <li><a href="#char" data-scroll="character">Characters</a></li>
                 </ul>
         </div>
-               <a href="#home">
-                <div class="logo">
-                </div>
-               </a>
+               <a href="#" data-scroll="home">
+                <div class="logo"></div>
+              </a>
+               
         <div class="menu">
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about" data-scroll="about">About</a></li>
                 <li><a href="#pOrder" id="pOrder">Pre-Order</a></li>
             </ul>
     </div>
         </nav>
-        <header class="main-header" id="home">
+          <section >
+            <h1 data-anchor="home" class="main-heading"></h1>
+          </section>
+        <header class="main-header" id="home" data-anchor="home">
+        
+
           <!-- <div class="heading">
             <h1>BATMAN</h1>
             <h1>Your enemies will define you</h1>
@@ -42,7 +47,7 @@
         </header>
             <main>  
         <section class="slider_container">
-          <h1 id="media">Media</h1>
+          <h1 id="media" data-anchor="media">Media</h1>
           <div class="section"></div>
         <div id="main-slider" class="splide">
           <div class="splide__track">
@@ -89,7 +94,7 @@
         </section>
 
         <section class="charc">
-          <h1 id="char">Characters</h1>
+          <h1 id="char" data-anchor="character">Characters</h1>
           <div class="logos"></div>
         <div id="top_slider" class="splide">
           <div class="splide__track">
@@ -147,8 +152,8 @@
         </section>
 
         <section id="about">
-          <div class= "about"></div>
-          <h1 class="abt">About</h1>
+          <div class= "about" ></div>
+          <h1 class="abt"data-anchor="about">About</h1>
           <p>
           When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.
           "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the evidence begins to lead closer to home and the scale of the perpetrator's plans become clear, he must forge new relationships, unmask the culprit and bring justice to the abuse of power and corruption that has long plagued the metropolis.
@@ -156,7 +161,8 @@
         </section>
       </main>
       <footer><p>Made with 💓 by Mahid Qureshi</p></footer>
-      <script>
+      <!-- splide -->
+<script>
 var main = new Splide( '#main-slider', {
   wheel    : true,
   type    : 'loop',
@@ -220,21 +226,15 @@ to.sync(bottom)
 to.mount();
 bottom.mount();
 </script>
+<!-- jquery -->
     <script>
       $('body').ready(function () {
-
         $('header').tilt({
           maxTilt:        30,
           perspective:    700,
           speed:          300,
           transition:     true,
         });
-        $('a').click(function (e) {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 900);
-        });
-
         $("body").on("mousemove",function(e){
         var win=$(window),
              width=win.innerWidth(),
@@ -253,8 +253,31 @@ bottom.mount();
           $(".about").css({
             transform:"translate("+-sideX+"px,"+-sideY+"px)"
           });
-        })
+        });
+        $('nav a').on('click', function() {
+var scrollAnchor = $(this).attr('data-scroll'),
+    scrollPoint = $('section h1[data-anchor="' + scrollAnchor + '"]').offset().top;
+$('body,html').animate({
+    scrollTop: scrollPoint
+}, 500);
+return false;
+})
+$(window).scroll(function() {
+var windscroll = $(window).scrollTop();
+if (windscroll >= 100) {
+    $('section').each(function(i) {
+        if ($(this).position().top <= windscroll-80) {
+            $('nav li a.active').removeClass('active');
+            $('nav li a').eq(i).addClass('active');
+        }
+    });
+
+} else {
+    $('nav li a.active').removeClass('active');
+}
+
+}).scroll();
       })
-    </script>
+  </script>
 </body>
 </html>
