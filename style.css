@@ -35,6 +35,7 @@ main{
 display: flex;
 justify-content: space-around;
 align-items:center;
+font-weight: bold;
 
 }
 ul{
@@ -89,6 +90,10 @@ li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 11;
+    filter: drop-shadow(0 0 1rem #fff);
+    
 }
 
 .heading{
@@ -118,7 +123,6 @@ li a:hover{
     animation-delay: 500ms;
     transform: translateY(150px);
     font-size: 3rem;
-    
 }
 
 @keyframes slide{
@@ -169,7 +173,7 @@ iframe{
 .splide{
 margin: auto;
 }
-.section{
+.section,.logos{
     position: relative;
     z-index: 8;
     transition: transform 300ms linear;
@@ -205,4 +209,171 @@ margin: auto;
     pointer-events: none;
     filter: drop-shadow(0 0 0.75rem black);
     z-index: -9;
+}
+#char,#media,#about{
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 100px;
+    text-shadow: -1px 1px 0 #fff,
+    1px 1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px -1px 0 #fff; 
+}
+
+.float{
+    width: 95%;
+}
+.float h1, .float p{
+    text-transform: capitalize;
+    text-shadow: -1px 1px 0 #fff,
+    1px 1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px -1px 0 #fff; 
+}
+.float h1{
+font-size: 3rem;
+}
+.float p{
+    font-size: 1.4rem;
+    font-weight: bold;
+    }
+.batman{
+    background-image: url(batman-main.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
+}
+.joker{
+    background-image: url(joker.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
+}
+.bane{
+    background-image: url(bane.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
+}
+.deathstroke{
+    background-image: url(/death.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 530px;
+    border: 5px solid #000;
+}
+.charc{
+    position: relative;
+    width: 1100px;
+    margin: auto; 
+}
+.logos::before{
+    content: "";
+    background-image: url(death_logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left:-180px;
+    transform: rotate(-30deg);
+    pointer-events: none;
+    filter: drop-shadow(0 0 0.75rem black);
+    z-index: 8;
+}
+
+.logos::after{
+    content: "";
+    background-image: url(bane_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    margin-right: -280px;
+    transform: rotate(20deg);
+    pointer-events: none;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+#top_slider,#bottom_slider{
+    position: absolute;
+}
+#bottom_slider{
+    left: 0;
+    right: 0;
+    position: relative;
+}
+#top_slider{
+    z-index: 7;
+    margin-right: 20px;
+    margin-top:20px;
+    right: 0;
+}
+
+#about{
+    position: relative;
+    z-index: -3 !important;
+    margin-bottom: 40px;
+}
+#about p{
+    text-shadow: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.about::after{
+    content: "Why so Serious !";
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    transform: rotate(20deg);
+    pointer-events: none;
+    color: orangered;
+    text-shadow: -1px 1px 0 red,
+    1px 1px 0 red,
+    1px -1px 0 red,
+    -1px -1px 0 red;
+    filter: drop-shadow(0 0 0.75rem red);
+    z-index: -1;
+}
+
+
+.about::before{
+    content: "";
+    background-image: url(neon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    transform: rotate(-30deg);
+    pointer-events: none;
+    filter: drop-shadow(0 0 1rem blue);
+    z-index: -4;
+}
+
+footer{
+    position: sticky;
+    bottom:0;
+    background-color: #000;
+    left: 0;
+    right:0;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px;
 }
