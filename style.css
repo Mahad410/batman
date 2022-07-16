@@ -226,7 +226,7 @@ margin: auto;
 .float{
     width: 95%;
 }
-.float h1, .float p{
+.float h1, .float p,#about p{
     text-transform: capitalize;
     text-shadow: -1px 1px 0 #fff,
     1px 1px 0 #fff,
@@ -325,7 +325,6 @@ font-size: 4rem;
     margin-bottom: 40px;
 }
 #about p{
-    text-shadow: none;
     font-size: 2rem;
     font-weight: bold;
     text-align: left;
