@@ -172,6 +172,12 @@ var main = new Splide( '#main-slider', {
   pagination : false,
   arrows     : false,
   cover      : true,
+  breakpoints : {
+    900: {
+      fixedHeight : '420px',
+      width : '780px',
+    },
+  },
 } );
 
 var thumbnails = new Splide( '#thumbnail-slider', {
@@ -184,15 +190,14 @@ var thumbnails = new Splide( '#thumbnail-slider', {
   pagination      : false,
   cover           : true,
   arrows : false,
-
   dragMinThreshold: {
     mouse: 4,
     touch: 10,
   },
   breakpoints : {
-    640: {
-      fixedWidth  : 66,
-      fixedHeight : 38,
+    900: {
+      fixedWidth  : 150,
+      fixedHeight : 90,
     },
   },
 } );
@@ -211,6 +216,12 @@ var to = new Splide( '#top_slider', {
   pagination : false,
   arrows:false,
   cover: true,
+  breakpoints : {
+    900: {
+      fixedHeight : '370px',
+      width :'50%'
+    },
+  },
 } );
 
 var bottom = new Splide( '#bottom_slider', {
@@ -222,6 +233,12 @@ var bottom = new Splide( '#bottom_slider', {
   pagination : false,
   arrows:false,
   cover: true,
+  breakpoints : {
+    900: {
+      fixedHeight : '420px',
+      width : '780px',
+    },
+  },
 } );
 to.sync(bottom)
 to.mount();
