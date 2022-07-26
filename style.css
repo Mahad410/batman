@@ -345,5 +345,8 @@ footer{
 }
 footer p{
     font-family: 'Blaka', cursive;
-    
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
